@@ -1,0 +1,150 @@
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background: #0088FF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+#mainHeader {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.header-logo {
+  width: 50px;
+  height: auto;
+  border-radius: 10%;
+  transition: transform 0.2s;
+  margin-right: 0.5rem;
+}
+
+/* Navbar Animation */
+.navbar a {
+  font-size: 16px;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 35px;
+  border-bottom: 3px solid transparent; /* Default hidden underline */
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar a:hover, 
+.navbar a.active {
+  border-bottom: 3px solid #FFFFFF; /* Underline on hover/active */
+  transform: translateY(-2px); /* Lift effect */
+}
+
+.menu-button {
+  background-color: white;
+  color: #0066cc;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.search-section {
+  text-align: center;
+  padding: 20px;
+}
+
+.search-bar {
+  width: 80%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+}
+
+.cards-section {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+.card .icons span {
+  margin: 0 5px;
+}
+
+.detail-button {
+  background-color: #0066cc;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.info-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.calendar,
+.announcements {
+  width: 45%;
+  padding: 10px;
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+}
+
+footer {
+  text-align: center;
+  background: #0066cc;
+  color: white;
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .cards-section {
+    flex-direction: column;
+  }
+
+  .info-section {
+    flex-direction: column;
+  }
+
+  .calendar,
+  .announcements {
+    width: 100%;
+  }
+}
